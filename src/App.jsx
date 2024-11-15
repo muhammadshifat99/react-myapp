@@ -12,28 +12,25 @@ export default function App() {
     margin: "10px",
   }
 
-  const Stylee = {
-    border: "1px solid red",
-    background: "green",
-    borderRadius: "9px",
-    padding: "10px",
-    margin: "10px",
-  }
+  
 
   const WorkData = [
-    {
+    { 
+      id: 1, 
       Degree: "HSC",
       Year: "2023",
       Board: "Barishal",
     },
 
     {
+      id: 2, 
       Degree: "SSC",
       Year: "2021",
       Board: "Barishal",
     },
  
     {
+      id: 3, 
       Degree: "JSC",
       Year: "2018",
       Board: "Barishal",
@@ -49,7 +46,7 @@ export default function App() {
       </div>
 
       {
-        WorkData.map((work) => <WorkSample />)
+        WorkData.map((work) => <WorkSample WorkData={work} key={work.id} />  )
       }
 
       
